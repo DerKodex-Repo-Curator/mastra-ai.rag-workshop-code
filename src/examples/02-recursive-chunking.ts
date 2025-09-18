@@ -19,7 +19,7 @@ const codeDoc = new MDocument({
 
 const chunks = await codeDoc.chunk({
   strategy: "recursive",
-  size: 150,
+  maxSize: 150,
   overlap: 0,
 });
 

@@ -27,4 +27,7 @@ export const mastra = new Mastra({
     storyEmbedder,
   },
   storage: pgStorage,
+  telemetry: {
+    enabled: false,
+  },
 });

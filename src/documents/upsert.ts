@@ -64,7 +64,6 @@ async function upsertDocuments() {
       ["##", "Header 2"],
     ],
     maxSize: 1500, // Large enough for complete code examples
-    minSize: 500, // Small enough to be specific but meaningful
     overlap: 100, // Enough to maintain context between chunks
   });
 
@@ -89,7 +88,6 @@ async function upsertDocuments() {
   await configDoc.chunk({
     strategy: "json",
     maxSize: 1000, // Smaller for JSON as each chunk should be a logical unit
-    minSize: 200, // Allow smaller chunks for individual config sections
     overlap: 50, // Less overlap needed for structured data
   });
 

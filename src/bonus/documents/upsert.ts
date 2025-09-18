@@ -74,7 +74,7 @@ async function upsertCodeDocuments() {
   // Chunk the code files using recursive strategy which is better for code
   await codeDoc.chunk({
     strategy: "recursive", // Best for code as it respects code structure
-    size: 1500, // Large enough for complete function/class definitions
+    maxSize: 1500, // Large enough for complete function/class definitions
     overlap: 50, // Small overlap to maintain context between chunks
   });
 

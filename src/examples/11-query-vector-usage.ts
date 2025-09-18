@@ -4,21 +4,21 @@ import { mastra } from "../mastra";
 async function queryVectorExample() {
   const queryVectorAgent = mastra.getAgent("queryVectorAgent");
   // Example 1: Semantic search for error handling
-  const errorResponse = await queryVectorAgent.generate(
+  const errorResponse = await queryVectorAgent.generateVNext(
     "Find implementations in our codebase that show how we handle database errors and validation errors"
   );
 
   console.log("\nError Handling Search:", errorResponse.text);
 
   // Example 2: Search with format and section filters
-  const configResponse = await queryVectorAgent.generate(
+  const configResponse = await queryVectorAgent.generateVNext(
     "How do we handle errors in our application? Filter where section is error-handling AND format is markdown. Return the top 3 results."
   );
 
   console.log("\nFiltered Error Handling Search:", configResponse.text);
 
   // Example 3: Search with reranking for authentication
-  const authResponse = await queryVectorAgent.generate(
+  const authResponse = await queryVectorAgent.generateVNext(
     "Find the most relevant code examples showing JWT token verification and session validation."
   );
 

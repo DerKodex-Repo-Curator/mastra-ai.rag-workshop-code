@@ -4,19 +4,19 @@ import { mastra } from "../mastra";
 async function basicSearchExample() {
   const basicAgent = mastra.getAgent("basicAgent");
   // Example 1: Authentication implementation
-  const authResponse = await basicAgent.generate(
+  const authResponse = await basicAgent.generateVNext(
     "How do we implement JWT authentication in our system?"
   );
   console.log("\nJWT Authentication Search:", authResponse.text);
 
   // Example 2: Error handling patterns
-  const errorResponse = await basicAgent.generate(
+  const errorResponse = await basicAgent.generateVNext(
     "What are our standard error handling patterns for API responses?"
   );
   console.log("\nError Handling Search:", errorResponse.text);
 
   // Example 3: Configuration structure
-  const configResponse = await basicAgent.generate(
+  const configResponse = await basicAgent.generateVNext(
     "What monitoring configurations are available in our system?"
   );
   console.log("\nConfiguration Search:", configResponse.text);

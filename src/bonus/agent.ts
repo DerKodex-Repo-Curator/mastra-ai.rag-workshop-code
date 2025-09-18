@@ -19,7 +19,7 @@ export const codeAgent = new Agent({
     
     Return code snippets with explanations of how they work and their purpose.
   `,
-  model: openai("gpt-4o"),
+  model: openai("gpt-4.1"),
   tools: {
     findCodeTool,
   },

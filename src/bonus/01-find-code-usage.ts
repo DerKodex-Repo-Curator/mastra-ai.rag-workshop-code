@@ -4,19 +4,19 @@ import { mastra } from "../mastra";
 async function findCodeExample() {
   const codeAgent = mastra.getAgent("codeAgent");
   // Example 1: Finding authentication method implementation
-  const authResponse = await codeAgent.generate(
+  const authResponse = await codeAgent.generateVNext(
     "Find the implementation of the verifyToken method in our authentication system"
   );
   console.log("\nAuth Implementation Search:", authResponse.text);
 
   // Example 2: Finding logger class definition
-  const loggerResponse = await codeAgent.generate(
+  const loggerResponse = await codeAgent.generateVNext(
     "Show me the AuditLogger class definition"
   );
   console.log("\nLogger Class Search:", loggerResponse.text);
 
   // Example 3: Finding error handling function
-  const errorResponse = await codeAgent.generate(
+  const errorResponse = await codeAgent.generateVNext(
     "Find the withDbErrorHandling function implementation in our error handling system"
   );
   console.log("\nError Handling Function Search:", errorResponse.text);

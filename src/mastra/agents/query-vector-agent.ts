@@ -22,7 +22,7 @@ export const queryVectorAgent = new Agent({
   
   ${PGVECTOR_PROMPT}
   `,
-  model: openai("gpt-4o"),
+  model: openai("gpt-4.1"),
   tools: {
     queryVectorTool,
   },

@@ -8,7 +8,7 @@ export const queryVectorTool = createVectorQueryTool({
   model: openai.embedding("text-embedding-3-small"),
   enableFilter: true,
   reranker: {
-    model: openai("gpt-4o"),
+    model: openai("gpt-4.1"),
     options: {
       topK: 5,
     },

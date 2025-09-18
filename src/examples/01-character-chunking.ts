@@ -12,7 +12,7 @@ const textDoc = new MDocument({
 
 const chunks = await textDoc.chunk({
   strategy: "character",
-  size: 20,
+  maxSize: 20,
   overlap: 0,
 });
 
